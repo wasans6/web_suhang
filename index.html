@@ -4,35 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이상형 월드컵</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* 그라데이션 배경 추가 */
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96); 
+            /* 배경 색상이 대각선으로 자연스럽게 변하는 그라데이션 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #fff; /* 텍스트 색상은 배경에 맞게 흰색 */
+        }
+
+        .category-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            width: 200px;
+            margin: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+
+        .category-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .category-card h2 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .category-card p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>이상형 월드컵</h1>
-        <p>당신의 이상형을 선택하세요!</p>
-    </header>
 
-    <main>
-        <section id="matchup" class="matchup">
-            <div class="option" id="option1">
-                <img src="image1.jpg" alt="과목별 이상형 월드컵">
-                <p>과목별 이상형 월드컵은 각 과목에 대한 선호도로 우위를 가립니다! 여기서 당신의 최애 과목을 선택하세요</p>
-                <button class="select-btn">선택하기</button>
-            </div>
-            <div class="option" id="option2">
-                <img src="image2.jpg" alt="옵션 2">
-                <p>옵션 2 설명</p>
-                <button class="select-btn">선택하기</button>
-            </div>
-        </section>
+<header>
+    <h1>이상형 월드컵</h1>
+    <p>주제를 선택하세요!</p>
+</header>
 
-        <button id="nextRound" class="hidden">다음 라운드</button>
-    </main>
+<div class="category-container">
+    <div class="category-card" onclick="window.location.href='choose.html?category=celebrities'">
+        <img src="https://via.placeholder.com/80?text=💕" alt="과목">
+        <h2>연예인</h2>
+        <p>당신이 제일 좋아하는 과목은?</p>
+    </div>
+    <div class="category-card">
+        <img src="https://via.placeholder.com/80?text=🍔" alt="PC게임">
+        <h2>음식</h2>
+        <p>당신이 제일 좋아하는 pc게임은?</p>
+    </div>
+    <div class="category-card">
+        <img src="https://via.placeholder.com/80?text=🐶" alt="모바일 게임">
+        <h2>동물</h2>
+        <p>당신이 제일 좋아하는 모바일 게임은?</p>
+    </div>
+</div>
 
-    <footer>
-        <p>© 2024 이상형 월드컵</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
